@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pet-foodshop-demo-version</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+
+    <!-- font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- header section starts  -->
+
+    <header class="header">
+      <a href="#" class="logo"> <i class="fas fa-paw"></i>Z!ON Mart</a>
+
+      <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#services">services</a>
+        <a href="#products">products</a>
+        <a href="#package">packages</a>
+        <a href="#review">review</a>
+      </nav>
+      <!-- search section -->
+      <div class="search-btn">
+        <input type="text" id="search-input" placeholder=" search Items " />
+      </div>
+      <!-- icons -->
+      <div class="icons">
+        <div class="fas fa-bars" id="menu-btn"></div>
+        <a
+          class="btn btn-dark"
+          data-bs-toggle="offcanvas"
+          href="#cart-sidebar"
+          role="button"
+          aria-controls="cart-sidebar"
+          ><i class="fa-solid fa-cart-shopping"></i
+        ></a>
+        <div class="fas fa-user" id="login-btn"></div>
+      </div>
+
+      <form action="" class="login-form">
+        <h3>login now</h3>
+        <input type="email" placeholder="your email" class="box" />
+        <input type="password" placeholder="your password" class="box" />
+        <p>forget your password <a href="#">click here</a></p>
+        <p>don't have an account <a href="#">create now</a></p>
+        <input type="submit" value="login now" class="btn" />
+      </form>
+
+    </div>
+    
+    </header>
+    <!-- header section ends -->
+
+    <!-- cart sidebar start -->
+    <div
+      class="offcanvas offcanvas-end fs-6 px-3"
+      tabindex="-1"
+      id="cart-sidebar"
+      aria-labelledby="cartSidebarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title fs-5" id="cartSidebarLabel">Your Cart</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <!-- my cart -->
+        <section class="cart-items mt-4">
+          <!-- cart item container -->
+        </section>
+        <hr class="mt-4" />
+        <!-- total row -->
+        <div class="row justify-content-end text-end mt-4">
+          <p class="col">Total</p>
+          <span class="col cart-total-price"></span>
+        </div>
+        <div class="checkout-container">
+          <!-- checkout form -->
+          <form class="checkout-form">
+            <fieldset>
+              <label class="form-label" for="name">Name</label>
+              <input
+                class="form-control"
+                name="name"
+                type="text"
+                id="name"
+                required
+              />
+            </fieldset>
+            <fieldset>
+              <label class="form-label" for="email">Email</label>
+              <input
+                class="form-control"
+                name="email"
+                type="email"
+                id="email"
+                required
+              />
+            </fieldset>
+            <fieldset>
+              <label class="form-label" for="phone">Phone</label>
+              <input
+                class="form-control"
+                name="phone"
+                type="tel"
+                id="phone"
+                required
+              />
+            </fieldset>
+            <fieldset>
+              <label class="form-label" for="address">Address</label>
+
+              <textarea
+                class="form-control"
+                name="address"
+                id="address"
+              ></textarea>
+            </fieldset>
+            <div class="d-flex justify-content-center mt-4">
+              <button class="checkout-btn btn btn-dark">Checkout</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- cart sidebar end -->
+    <!-- home section starts  -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3><span>hi</span> welcome to our pet store</h3>
+        <a href="#products" class="btn">shop now</a>
+      </div>
+      <img src="image/bottom_wave.png" class="wave" alt="wave" />
+    </section>
+
+    <!-- home section ends -->
+
+    <!-- about section starts -->
+    <section class="about" id="about">
+      <div class="image">
+        <img src="image/about_img.png" alt="about" />
+      </div>
+
+      <div class="content">
+        <h3>We provide <br><span>High Quality Pet foods</span><br> and awesome <br> <span>pet care services</span></h3>
+<!-- The Modal section starts-->
+        <button id="myBtn" class="btn">Read more</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            
+            <div class="modal-maininfo">
+              
+            <img src="image/info.jpg" alt="info">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo tempore eveniet quas tenetur dignissimos fugit ipsum voluptate quasi praesentium esse eum adipisci quibusdam dolor nobis consequatur, dolorem, assumenda.</p>
+          <span class="close">&times;</span>
+        </div>
+      </div>
+<!-- modal section ends -->
+  </div> 
+</section>
+    <!-- about section ends -->
+
+    <!-- promotion section starts  -->
+
+    <section class="promotion" id="promotion">
+      <h1 class="heading">Current <span>Promotions</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="image/dog_food.png" alt="dog food" />
+          <h3>Dog foods</h3>
+          <p>upto 45% off</p>
+          <a href="#dogfood" class="btn">shop now</a>
+          <a href="#dogfood" class="toggle-btn">
+            <img src="image/shop_now_dog.png" alt="" />
+          </a>
+        </div>
+
+        <div class="box">
+          <img src="image/cat_food.png" alt="cat food" />
+          <h3>Cat foods</h3>
+          <p>upto 45% off</p>
+          <a href="#catfood" class="btn">shop now</a>
+          <a href="#catfood" class="toggle-btn">
+            <img src="image/shop_now_cat.png" alt="" />
+          </a>
+        </div>
+
+        <div class="box">
+          <img src="image/clothings.jpg" alt="clothings" />
+          <h3>Clothings</h3>
+          <p>upto 45% off</p>
+          <a href="#clothing" class="btn">shop now</a>
+          <a href="#clothing" class="toggle-btn">
+            <img src="image/shop_now_dog.png" alt="" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- promotions section ends -->
+    <!-- serivce section starts  -->
+
+    <section class="services" id="services">
+      <h1 class="heading">our <span>Services</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <i class="fas fa-dog"></i>
+          <h3>dog boarding</h3>
+          <a href="https://www.rover.com/blog/what-is-dog-boarding/" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-cat"></i>
+          <h3>cat boarding</h3>
+          <a href="https://www.thedrakecenter.com/services/cats/cat-boarding-everything-you-need-know-about-cat-boarding" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-bath"></i>
+          <h3>spa & grooming</h3>
+          <a href="https://www.pawspace.in/what-are-dog-spas-and-how-are-they-beneficial/" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-drumstick-bite"></i>
+          <h3>healthy meal</h3>
+          <a href="https://www.animalerc.com/importance-feeding-pet-healthy-diet/" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-baseball-ball"></i>
+          <h3>activity exercise</h3>
+          <a href="https://fitzroyvet.com.au/pet-library/the-benefits-of-exercise-for-your-pet" class="btn">read more</a>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-heartbeat"></i>
+          <h3>health care</h3>
+          <a href="https://www.azpetvet.com/why-preventive-health-care-for-pets-is-important/" class="btn">read more</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- services section ends -->
+
+ <!-- products section starts  -->
+    <section class="products" id="products">
+      <h1 class="heading">our <span>products</span></h1>
+
+      <div id="dogfood" class="swiper product-slider">
+        <h3 class="sub-title">Dog foods</h3>
+
+        <div class="shop-item box-container swiper-wrapper">
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye" ></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_01.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">free range chicken</h3>
+            <div class="price shop-item-price">11000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_02.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">beef</h3>
+            <div class="price shop-item-price">7500 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_03.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">Lamb</h3>
+            <div class="price shop-item-price">6000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_04.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">beef sticks</h3>
+            <div class="price shop-item-price">7000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_05.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">vitamin sticks</h3>
+            <div class="price shop-item-price">6000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="catfood" class="swiper product-slider">
+        <h3 class="sub-title">Cat foods</h3>
+        <div class="shop-item box-container swiper-wrapper">
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_06.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">premium snacks</h3>
+            <div class="price shop-item-price">18000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_07.png"
+                alt=""
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">Hair growth snacks</h3>
+            <div class="price shop-item-price">14000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_08.png"
+                alt=""
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">Kitten snacks</h3>
+            <div class="price shop-item-price">15000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_09.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">nutrition snacks</h3>
+            <div class="price shop-item-price">20000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_10.jpg"
+                alt=""
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">Premium salmon</h3>
+            <div class="price shop-item-price">24000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="clothing" class="swiper product-slider">
+        <h3 class="sub-title">Pet Clothings</h3>
+        <div class="shop-item box-container swiper-wrapper">
+
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_11.jpg"
+                alt="cloth"
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">Wool vest( blue )</h3>
+            <div class="price shop-item-price">8000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_12.jpg"
+                alt="cloth"
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">wool vest( purple )</h3>
+            <div class="price shop-item-price">8000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_13.jpg"
+                alt="cloth"
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">light-weight shirt</h3>
+            <div class="price shop-item-price">11000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div class="shop-item card swiper-slide box product-card">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_14.jpg"
+                alt="cloth"
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">cotton dress</h3>
+            <div class="price shop-item-price">14000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+
+          <div class="shop-item card swiper-slide box">
+            <div class="icons">
+              <a href="#" class="fas fa-heart"></a>
+              <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+              <img
+                class="shop-item-image card-img-top"
+                src="image/product_15.jpg"
+                alt="cloth"
+              />
+            </div>
+            <h3 class="shop-item-title cart-title">double-layered shirt</h3>
+            <div class="price shop-item-price">24000 ks</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <button class="btn btn-dark shop-item-button px-5">
+              <i class="fa-solid fa-cart-plus"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- products section ends -->
+
+    <!-- package section starts -->
+    <section class="package" id="package">
+      <h1 class="heading">Pet care <span>Packages</span></h1>
+
+      <div class="box-container">
+
+        <div class="box">
+          <h3 class="title">pet care</h3>
+          <h3 class="day">1 days</h3>
+          <i class="fas fa-bicycle icon"></i>
+          <div class="list">
+            <p>pet room <span class="fas fa-times-circle"></span></p>
+            <p>pet grooming <span class="fas fa-check"></span></p>
+            <p>pet exercise <span class="fas fa-check"></span></p>
+            <p>pet meals <span class="fas fa-check"></span></p>
+          </div>
+          <div class="amount">6000<span>ks</span></div>
+          <a href="#" class="btn">Buy</a>
+        </div>
+
+        <div class="box">
+          <h3 class="title">pet care</h3>
+          <h3 class="day">10 days</h3>
+          <i class="fas fa-motorcycle icon"></i>
+          <div class="list">
+            <p>pet room <span class="fas fa-check"></span></p>
+            <p>pet grooming <span class="fas fa-check"></span></p>
+            <p>pet exercise <span class="fas fa-check"></span></p>
+            <p>pet meals <span class="fas fa-check"></span></p>
+          </div>
+          <div class="amount">50000<span>ks</span></div>
+          <a href="#" class="btn">Buy</a>
+        </div>
+
+        <div class="box">
+          <h3 class="title">pet care</h3>
+          <h3 class="day">30 days</h3>
+          <i class="fas fa-car-side icon"></i>
+          <div class="list">
+            <p>pet room <span class="fas fa-check"></span></p>
+            <p>pet grooming <span class="fas fa-check"></span></p>
+            <p>pet exercise <span class="fas fa-check"></span></p>
+            <p>pet meals <span class="fas fa-check"></span></p>
+          </div>
+          <div class="amount">140000<span>ks</span></div>
+          <a href="#" class="btn">Buy</a>
+        </div>
+      </div>
+    </section>
+    <!-- package section ends -->
+
+    <!-- review section starts  -->
+
+    <section class="review" id="review">
+      <h1 class="heading">customer's <span>review</span></h1>
+
+      <div class="swiper review-slider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <img src="image/pic-1.png" alt="" />
+            <p>
+               Always brilliant. Great choice of products at fantastic prices. Delivery always as they say. If you haven't tried them yet have a try you won't be dissapointed
+
+            </p>
+            <h3>john deo</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="image/pic-2.png" alt="" />
+            <p>
+               Affordable prices with free and fast delivery with a realistic minimum spend, would highly recommend for choice, value and efficiency of ordering
+            </p>
+            <h3>emily</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="image/pic-3.png" alt="" />
+            <p>
+              They are an efficient, friendly and helpful firm to deal with, our puppy is doing well with the food they supply.
+            </p>
+            <h3>sam harold</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+          </div>
+
+          <div class="swiper-slide box">
+            <img src="image/pic-4.png" alt="" />
+            <p>
+               Good prompt service and arrived well before the date given. Glad to find they were not in huge amounts of packaging, despite the weight of the packs.
+            </p>
+            <h3>lora</h3>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- review section ends -->
+
+    <!-- contact section starts -->
+    <section class="contact" id="contact">
+      <div class="image">
+        <img src="image/contact_img.png" alt="" />
+      </div>
+
+      <form action="">
+        <h3>contact us</h3>
+        <input type="text" placeholder="your name" class="box" />
+        <input type="email" placeholder="your email" class="box" />
+        <input
+          type="tumber"
+          placeholder="your number ( *Optional... )"
+          class="box"
+        />
+        <textarea
+          name=""
+          placeholder="  your message( suggestions etc..... )"
+          id=""
+          cols="30"
+          rows="10"
+        ></textarea>
+        <input type="submit" value="send message" class="btn" />
+      </form>
+    </section>
+    <!-- contact section ends -->
+
+    <!-- footer section starts  -->
+
+    <section class="footer">
+      <div class="box-container">
+        <div class="box">
+          <h3>Z!ON Mart <i class="fas fa-paw"></i></h3>
+          <p>Always pleasure to serve with our hearts</p>
+          <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+          </div>
+        </div>
+
+        <div class="box">
+          <h3>contact info</h3>
+          <a href="#" class="links">
+            <i class="fas fa-phone"></i> +959-784434939
+          </a>
+          <a href="#" class="links">
+            <i class="fas fa-phone"></i> +959-979133123
+          </a>
+          <a href="#" class="links">
+            <i class="fas fa-envelope"></i> Zionmart@gmail.com
+          </a>
+          <a href="#" class="links">
+            <i class="fas fa-map-marker-alt"></i> Thanlyin / Yangon</a
+          >
+        </div>
+
+        <div class="box">
+          <h3>Up-to-date Infos</h3>
+          <p>subscribe for latest updates</p>
+          <input type="email" placeholder="your email" class="email" />
+          <input type="submit" value="subscribe" class="btn" />
+        </div>
+      </div>
+
+      <div class="credit">
+        created by <span> ZION </span> | all rights reserved
+      </div>
+    </section>
+    
+
+    <!-- footer section ends -->
+
+    <!-- custom js file link  -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
